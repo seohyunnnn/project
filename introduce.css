@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  margin-left: 160px; /* 사이드바 너비만큼 밀어줌 */
+  margin-left: 160px; 
   font-family: "Gamja Flower", sans-serif;
 }
 
@@ -14,12 +14,12 @@ section {
 
 #home {
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     list-style-type: none;
 }
 
 #category {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: lighter;
 }
 
@@ -29,8 +29,8 @@ section {
   left: 0;
   width: 120px;
   height: 100vh;
-  background-color: #f1f1f1;
-  padding-top: 60px; /* 상단 고정 메뉴와 겹치지 않게 여백 줌 */
+  background-color: hsl(0, 0%, 92%);
+  padding-top: 60px; 
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   z-index: 999;
   box-sizing: border-box;
@@ -43,7 +43,7 @@ section {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ✅ 왼쪽 정렬 */
+  align-items: flex-start; 
 }
 
 .sidebar li {
@@ -53,7 +53,7 @@ section {
 .sidebar a {
   display: block;
   width: 100%;
-  padding: 12px 20px;
+  /* padding: 12px 20px; */
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -64,12 +64,15 @@ section {
 
 .sidebar a:hover {
   background-color: #ddd;
-  color: #3a87c9;
   font-size: 35px;
 }
 
-
-
+.sidebar div {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 ul {
     display: flex;
@@ -85,83 +88,99 @@ ul {
     font-weight: bold;
   }
   ul li a:hover {
-    color: rgb(134, 200, 238);
+    color: rgb(106, 151, 236);
   }
 
 /* section-home */
 .intro {
-    text-align: center;
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    text-align: left;
+    padding-top: 80px;
+    padding-left: 450px; 
 }
+
 
 .intro_img {
     width: 400px;
     height: 400px;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 50px;
-}
+    margin-left: -20px;
+  }
 
 .intro_ex {
     font-size: 50px;
     color: black;
 }
 
+.highlight-name {
+  color: rgb(106, 151, 236); 
+  font-weight: 900;
+}
+
+
+
 /* section-like */
-.like_1 {
-    width: 300px;
-    height: 200px;
-}
-
 #like {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 110px;
-  }
-  
-  .like_left, .like_right {
-    display: flex;            
-    flex-direction: column;   
-    justify-content: space-between; 
-    align-items: center;       
-    width: 400px;
-    background-color: hsla(60, 100%, 94%, 0.725);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  }
-
-  .like_left:hover, .like_right:hover {
-  transform: translateY(-5px); /* 호버 시 살짝 올라오는 효과 */
+  display: flex;
+  justify-content: center; 
+  gap: 40px;
+  padding: 150px 0; 
+  position: relative; 
 }
 
-  .like_1 {
-    width: 65%;            
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-  }
-  
-  .like_2 {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-  }
+.like_title {
+  position: absolute;
+  top: 35px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  font-size: 80px;
+  color: #000000;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
 
-  .like_left h1::after,
+.like_left, .like_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  background-color: hsla(60, 100%, 94%, 0.725);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.like_1 {
+  width: 65%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.like_2 {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.like_left h1::after,
 .like_right h1::after {
   content: "";
   display: block;
   width: 100px;
   height: 2px;
   background-color: #000;
-  margin: 10px auto 20px; 
+  margin: 10px auto 20px;
 }
 
 .like_left h3 {
@@ -173,9 +192,9 @@ ul {
 
 .like_left p {
   margin: 0 !important;
-  padding: 5px 0 0 0 !important;  /* 위쪽 여백만 살짝 남기기 */
+  padding: 5px 0 0 0 !important;
   line-height: 1.4;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .like_left h1, .like_right h1 {
@@ -183,96 +202,122 @@ ul {
   font-weight: bold;
   margin-bottom: 5px;
   position: relative;
-  }
+}
 
 .like_left h3, .like_right h3 {
   font-size: 22px;
   font-weight: bold;
   margin: 10px 0;
-  }
-  
+}
+
 .like_left p, .like_right p {
-    font-size: 18px;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    margin: 10px 0;
-  }
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+}
+
 
 /* section-about */
 
 .section_about {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center; 
-    align-items: center;  
-    padding: 100px 0;  
-    box-sizing: border-box;
-  }
-  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  flex-direction: column;  
+  padding: 10px 0;  
+  box-sizing: border-box;
+}
+
+.about-title {
+  font-size: 80px; 
+  font-weight: bold; 
+  color: #000000; 
+  text-align: center; 
+  margin-top: 10px;
+  margin-bottom: 250px;
+  position: relative;
+  top: 10px; 
+}
 
 .profile {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    background-color: #e4f5ffb9;
-    border-radius: 15px;
-    font-size: 40px;
-    padding: 25px;
-    box-sizing: border-box;
-    width: 1200px;
-    height: 550px;
-    margin: 0 auto;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-  
-.profile_img {
-    width: 500px;
-    height: 500px;
-    border-radius: 15px;
-}
-  
-.profile_text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 30px;
+  background-color: #e4f5ffb9;
+  border-radius: 15px;
+  font-size: 40px;
+  padding: 25px;
+  box-sizing: border-box;
+  width: 1200px;
+  height: 550px;
+  margin: 0 auto;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  margin-top: -200px;
 }
 
+
+.profile_img {
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.profile_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
 
 .profile_text h1::after {
   content: "";
   display: block;
-  width: 620px;  /* ← 줄 길이 조절 */
+  width: 620px; 
   height: 2.5px;
   background-color: #7eabf0;
   margin: 10px 0 20px;
 }
 
 .profile_item {
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    margin-bottom: 10px;
-    
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .profile_item h3,
 .profile_item p {
-    margin: 0;
-    font-size: 30px;
+  margin: 0;
+  font-size: 30px;
 }
 
+/* section-work */
+
 .section_work {
-  min-height: 100vh;   
-  padding-top: 120px; 
-  padding-bottom: 120px;
+  min-height: auto; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: flex-start; 
   align-items: center;
-  gap: 60px;
+  gap: 10px;
 }
+
+.work-title {
+  font-size: 80px; 
+  font-weight: bold; 
+  color: #000000; 
+  text-align: center; 
+  margin-bottom: 20px; 
+  position: relative;
+  top: 5px; 
+}
+
 
 .work_block {
   display: flex;
@@ -299,7 +344,6 @@ ul {
   height: auto;
   border-radius: 10px;
 }
-
 
 .work_text, .work_text2 {
   display: flex;
